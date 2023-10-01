@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Quiz task</title>
+
+        <link
+        href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+
+        <!-- reset.css -->
+        <link
+        href="./css/reset.css" rel="stylesheet" type="text/css">
+
+        <!-- style.css -->
+        <link href="./css/style.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <div class="quiz">
+            <div class="quiz-header">
+                <h1 class="quiz-header__title">Онлайн-подбор средств для лица</h1>
+                <p class="quiz-header__text">Пройдите короткий тест и получите список наиболее подходящих для вас косметических продуктов</p>
+            </div>
+
+            <!-- main section of questions -->
+            <div class="quiz-questions">
+
+                <!-- current issue indicator with transition option -->
+                <div class="indicators">
+                    <ol class="indicators__list" id="indicators__list">
+                        <!-- <ul class="indicators__item indicators__item_active" data-move="0"></ul>
+                        <ul class="indicators__item" data-move="1"></ul>
+                        <ul class="indicators__item" data-move="2"></ul> -->
+                    </ol>
+                    <p class="indicators__question">Вопрос 1 из 3</p>
+                </div>
+
+                <!-- block of questions -->
+                <div class="questions">
+                    <h1 class="questions__text">Сколько вам лет?</h1>
+                    <div class="questions__block" id="questions">
+                        <!-- <label class="questions__block__label" for="answer-1">
+                            <input class="questions__block__radio" id="answer-1" type="radio" name="answer" required/>
+                            Нужны средства для ребёнка младше 10 лет
+                        </label> -->
+                    </div>
+
+                    <!-- buttons to move between questions -->
+                    <div class="questions__buttons">
+                        <button class="questions__buttons__previous" data-previous='0'>Назад</button>
+                        <button class="questions__buttons__next" data-next='0'>Дальше</button>
+                        <button class="questions__buttons__result">Узнать результат</button>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <!-- product display block -->
+            <div class="quiz-result hidden">
+                <div class="products__container">
+                    <!-- <div class="products__item">
+                        <div class="products__image">
+                            <img class="products__product-image" src="./images/product-1.jpeg"/>
+                            <img class="products__like" src="./images/heart.svg">
+                        </div>
+
+                        <div class="products__item__text">
+                            <h2>Бальзам от пигм.пятен для чув. кожи ISISPHARMA NEOTONE Sensitive 30мл</h2>
+                            <span class="products__item__old-price">155.55</span>
+                            <span class="products__item__new-price"> 98.13</span>
+                        </div>
+                    </div> -->
+                </div>
+
+                <!-- pagination list -->
+                <div class="products__pagination">
+                    <ul class="pagination__list">
+                        <li class="pagination__item active">1</li>
+                        <li class="pagination__item">2</li>
+                        <li class="pagination__item">3</li>
+                        <li class="pagination__dots">...</li>
+                        <li class="pagination__item">13</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </body>
+
+    <script src="./js/script.js"></script>
+</html>

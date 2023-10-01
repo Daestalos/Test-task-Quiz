@@ -1,0 +1,291 @@
+body {
+  font-family: "Inter";
+
+  display: flex;
+  align-items: center;
+  height: 100vh;
+}
+
+/* :: main section */
+
+.quiz {
+  margin-left: 50px;
+  height: 90vh;
+}
+
+.quiz-header__title {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48.41px;
+}
+
+.quiz-header__text {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 583px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24.2px;
+}
+
+/* :: questions section  */
+.quiz-questions {
+  height: fit-content;
+  width: 900px;
+  border-radius: 10px;
+  background: #ddf3ff;
+}
+
+/* :: indicators of current question */
+
+.indicators {
+  padding: 20px 0 20px 0;
+  margin-left: 40px;
+}
+
+.indicators__list {
+  display: flex;
+  list-style: none;
+}
+
+.indicators__item {
+  flex: 0 1 auto;
+  box-sizing: content-box;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-right: 7px;
+  background-color: #89d1f8;
+  background-clip: padding-box;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  cursor: pointer;
+}
+
+.indicators__item_active {
+  background-color: #00a5ff;
+}
+
+.indicators__question {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18.15px;
+  color: #9a9a9a;
+}
+
+/* :: question item section */
+
+.questions {
+  margin-left: 40px;
+}
+
+.questions__text {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24.2px;
+}
+
+.questions__block {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+
+  padding: 20px 0;
+}
+
+.questions__block__label {
+  padding: 10px 0;
+}
+
+.questions__block__radio {
+  margin-right: 5px;
+}
+
+.questions__buttons {
+  padding: 15px 0 50px 0;
+}
+
+.questions__buttons__previous {
+  padding: 10px 15px;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 18.15px;
+  color: #000000;
+  background-color: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.questions__buttons__next {
+  padding: 10px 15px;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 18.15px;
+  color: #ffffff;
+  background-color: #00a5ff;
+  border: 1px solid #00a5ff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.questions__buttons__result {
+  padding: 10px 15px;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 18.15px;
+  color: #ffffff;
+  background-color: #00a5ff;
+  border: 1px solid #00a5ff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* :: quiz results section */
+
+.quiz-result {
+  height: fit-content;
+  width: 100%;
+  max-width: 1500px;
+}
+
+.products__container {
+  height: fit-content;
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+
+  justify-content: start;
+}
+
+.products__item {
+  height: 340px;
+  width: 240px;
+  background: white;
+}
+
+.products__image {
+  height: 240px;
+  width: 240px;
+
+  border: 1px solid #e9e9e9;
+  border-radius: 6.75px;
+}
+
+.products__product-image {
+  max-width: 100%;
+  max-height: 100%;
+
+  display: block;
+  margin: 0 auto;
+}
+
+.products__like {
+  height: 32px;
+  width: 32px;
+
+  position: relative;
+  top: -225px;
+  right: -190px;
+
+  cursor: pointer;
+}
+
+.products__item__text h2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin: 10px 0;
+}
+
+.products__item__old-price {
+  text-decoration: line-through;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 27.38px;
+  color: #b8b8b8;
+}
+
+.products__item__new-price {
+  font-weight: 600;
+  font-size: 27px;
+  line-height: 36.96px;
+}
+
+/* :: pagination section */
+
+.pagination__list {
+  padding: 30px 0;
+  display: flex;
+}
+
+.pagination__item,
+.pagination__dots {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24.2px;
+  list-style: none;
+  margin-right: 5px;
+  color: #b8b8b8;
+
+  cursor: pointer;
+}
+
+.active {
+  color: #00a5ff;
+}
+
+.hidden {
+  display: none;
+}
+
+@media only screen and (max-width: 1116px) {
+  body {
+    width: 100vw;
+  }
+
+  .products__container {
+    justify-content: space-around;
+  }
+
+  .quiz-header__title,
+  .quiz-header__text {
+    text-align: center;
+    width: 100%;
+    padding: 0 5px;
+  }
+  .quiz {
+    margin-left: 0;
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .quiz-questions {
+    width: 90vw;
+  }
+
+  .questions__buttons {
+    display: flex;
+    justify-content: center;
+    margin-left: -40px;
+  }
+
+  .questions__buttons__previous {
+    margin-right: 10px;
+  }
+
+  .pagination__list {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .pagination__item,
+  .pagination__dots {
+    font-size: 25spx;
+    margin-right: 20px;
+  }
+}
