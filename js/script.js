@@ -217,7 +217,12 @@ buttonPrevious.addEventListener('click', () => {
 })
 
 buttonResult.addEventListener('click', async () => {
-    let productData = await fetch('../services/products.json').then(res => res.json())
+    if (questionsData.length === localStorage.length) {
+        let productData = await fetch('../services/products.json').then(res => res.json())
 
-    renderResults(productData)
+        renderResults(productData)
+    }
+    else {
+        alert('Ответьте на все вопросы');
+    }
 })
